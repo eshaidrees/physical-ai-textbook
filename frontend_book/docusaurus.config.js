@@ -16,7 +16,7 @@ const config = {
   url: 'https://eshaidrees.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Textbook/',
+  baseUrl: '/physical-ai-textbook/',
   trailingSlash: true,
   deploymentBranch: 'gh-pages',
 
@@ -24,7 +24,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'eshaidrees', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics-Textbook', // Usually your repo name.
+  projectName: 'physical-ai-textbook', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -47,7 +47,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/eshaidrees/Physical-AI-Humanoid-Robotics-Textbook/tree/main/',
+            'https://github.com/eshaidrees/physical-ai-textbook/tree/main/',
         },
         blog: false, // Optional: disable the blog plugin
         theme: {
@@ -76,7 +76,7 @@ const config = {
             label: 'Book',
           },
           {
-            href: 'https://github.com/eshaidrees/Physical-AI-Humanoid-Robotics-Textbook/',
+            href: 'https://github.com/eshaidrees/physical-ai-textbook/',
             label: 'GitHub',
             position: 'right',
           },
