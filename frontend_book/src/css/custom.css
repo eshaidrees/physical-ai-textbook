@@ -1,0 +1,229 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3B82F6; /* accent blue */
+  --ifm-color-primary-dark: #2563EB;
+  --ifm-color-primary-darker: #1D4ED8;
+  --ifm-color-primary-darkest: #1E3A8A;
+  --ifm-color-primary-light: #60A5FA;
+  --ifm-color-primary-lighter: #93C5FD;
+  --ifm-color-primary-lightest: #DBEAFE;
+  --ifm-color-secondary: #1E293B; /* dark blue-gray */
+  --ifm-color-secondary-dark: #0F172A; /* primary dark */
+  --ifm-color-secondary-darker: #0C1422;
+  --ifm-color-secondary-darkest: #0A111D;
+  --ifm-color-secondary-light: #334155;
+  --ifm-color-secondary-lighter: #475569;
+  --ifm-color-secondary-lightest: #64748B;
+  --ifm-background-color: #0F172A;
+  --ifm-background-surface-color: #1E293B;
+  --ifm-text-color: #F1F5F9;
+  --ifm-text-color-secondary: #CBD5E1;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.2);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #3B82F6; /* accent blue */
+  --ifm-color-primary-dark: #2563EB;
+  --ifm-color-primary-darker: #1D4ED8;
+  --ifm-color-primary-darkest: #1E3A8A;
+  --ifm-color-primary-light: #60A5FA;
+  --ifm-color-primary-lighter: #93C5FD;
+  --ifm-color-primary-lightest: #DBEAFE;
+  --ifm-color-secondary: #1E293B; /* dark blue-gray */
+  --ifm-color-secondary-dark: #0F172A; /* primary dark */
+  --ifm-color-secondary-darker: #0C1422;
+  --ifm-color-secondary-darkest: #0A111D;
+  --ifm-color-secondary-light: #334155;
+  --ifm-color-secondary-lighter: #475569;
+  --ifm-color-secondary-lightest: #64748B;
+  --ifm-background-color: #0F172A;
+  --ifm-background-surface-color: #1E293B;
+  --ifm-text-color: #F1F5F9;
+  --ifm-text-color-secondary: #CBD5E1;
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.3);
+}
+
+/* Apply dark theme to all elements */
+html {
+  background-color: #0F172A;
+}
+
+body {
+  background-color: #0F172A;
+  color: #F1F5F9;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #0F172A;
+  border-bottom: 1px solid #334155;
+}
+
+.navbar__title {
+  color: #F1F5F9;
+}
+
+.navbar__link {
+  color: #CBD5E1;
+}
+
+.navbar__link:hover {
+  color: #3B82F6;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #0F172A;
+  border-top: 1px solid #334155;
+  color: #CBD5E1;
+}
+
+.footer__title {
+  color: #F1F5F9;
+}
+
+.footer__link-item {
+  color: #CBD5E1;
+}
+
+.footer__link-item:hover {
+  color: #3B82F6;
+}
+
+/* Hero banner styling */
+.hero {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #F1F5F9;
+}
+
+.hero__title {
+  color: #F1F5F9;
+}
+
+.hero__subtitle {
+  color: #CBD5E1;
+}
+
+/* Buttons styling */
+.button {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: #3B82F6;
+  border-color: #3B82F6;
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #2563EB;
+  border-color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.button--secondary {
+  background-color: transparent;
+  border: 1px solid #3B82F6;
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60A5FA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Docs page styling */
+.main-wrapper {
+  background-color: #0F172A;
+}
+
+/* Sidebar styling */
+.menu {
+  background-color: #1E293B;
+  border-right: 1px solid #334155;
+}
+
+.menu__list-item-collapsible {
+  color: #F1F5F9;
+}
+
+.menu__link {
+  color: #CBD5E1;
+}
+
+.menu__link:hover {
+  color: #3B82F6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.menu__link--active {
+  color: #3B82F6;
+  background-color: rgba(59, 130, 246, 0.15);
+}
+
+/* Content styling */
+.markdown {
+  color: #F1F5F9;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: #F1F5F9;
+}
+
+/* Code blocks */
+.prism-code {
+  background-color: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+/* Tables */
+.table-of-contents__link {
+  color: #CBD5E1;
+}
+
+.table-of-contents__link:hover {
+  color: #3B82F6;
+}
+
+.table-of-contents__link--active {
+  color: #3B82F6;
+}
+
+/* Cards and other elements */
+.card {
+  background-color: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+/* Links */
+a {
+  color: #3B82F6;
+}
+
+a:hover {
+  color: #60A5FA;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #F1F5F9;
+}

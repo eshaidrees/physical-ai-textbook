@@ -1,23 +1,40 @@
-# Use an official Python runtime as the base image
+# Use Python 3.10 slim image as the base
 FROM python:3.10-slim
 
-# Set the working directory in the container
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Set the working directory
 WORKDIR /app
 
-# Copy the requirements file into the container
-COPY requirements.txt .
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+        git \
+        libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy the backend requirements first to leverage Docker cache
+COPY backend/requirements.txt .
 
-# Copy the main application file into the container
-COPY main.py .
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Make port 8000 available to the world outside this container
+# Copy the entire backend source code
+COPY backend/ .
+
+# Create a non-root user
+RUN adduser --disabled-password --gecos '' appuser
+RUN chown -R appuser:appuser /app
+USER appuser
+
+# Expose port
 EXPOSE 8000
 
-# Define environment variable
-ENV PYTHONUNBUFFERED=1
-
-# Run the application when the container launches
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the application
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]

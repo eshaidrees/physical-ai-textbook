@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s docs)",
+      "Bash(dir docs /s)",
+      "Bash(dir frontend_book /s)",
+      "Bash(pip show qdrant-client)",
+      "Bash(python -c \"\nfrom qdrant_client.http import models\nimport inspect\n\n# Check what parameters are available in SearchRequest\nsig = inspect.signature\\(models.SearchRequest.__init__\\)\nprint\\(''SearchRequest parameters:'', list\\(sig.parameters.keys\\(\\)\\)\\)\n\n# Check if there''s a different parameter for vector inclusion\nsearch_req = models.SearchRequest\nprint\\(''SearchRequest attributes:'', [attr for attr in dir\\(search_req\\) if not attr.startswith\\(''_''\\)]\\)\n\")",
+      "Bash(python test_fixes.py)"
+    ]
+  }
+}
